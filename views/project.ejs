@@ -1,0 +1,129 @@
+<%
+  const cat = (section.categories || []).find(c => c.id === item.category);
+  const paras = String(L(item.description) || '').split(/\n\s*\n/).filter(Boolean);
+  const docs = item.documents || [];
+  const buy = buyUrlFor(item);
+%>
+<%- include('partials/head', { title: L(item.title), description: L(item.summary), image: item.coverUrl }) %>
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="/<%= lang %>/"><%= t('nav.home') %></a> <span>/</span>
+    <a href="/<%= lang %>/<%= section.id %>"><%= L(section.title) %></a> <span>/</span>
+    <span aria-current="page"><%= L(item.title) %></span>
+  </nav>
+
+  <div class="detail">
+    <article class="detail-main">
+      <header>
+        <div class="meta">
+          <% if (cat) { %><span class="pill"><%= L(cat.label) %></span><% } %>
+          <% if (item.year) { %><span class="pill ghost"><%= item.year %></span><% } %>
+        </div>
+        <h1><%= L(item.title) %></h1>
+        <p class="lead"><%= L(item.summary) %></p>
+      </header>
+
+      <% if (item.videoInfo) { %>
+      <section class="sec" id="video">
+        <h2><%= t('video') %></h2>
+        <div class="video">
+          <% if (item.videoInfo.type === 'file') { %>
+            <video controls preload="metadata" playsinline poster="<%= item.shots[0] || item.coverUrl %>"><source src="<%= item.videoInfo.src %>"></video>
+          <% } else { %>
+            <iframe src="<%= item.videoInfo.src %>" title="<%= L(item.title) %>" loading="lazy" allowfullscreen referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"></iframe>
+          <% } %>
+        </div>
+      </section>
+      <% } else if (!item.shots.length) { %>
+        <div class="hero-img"><img src="<%= item.coverUrl %>" alt="<%= L(item.title) %>" width="800" height="600"></div>
+      <% } %>
+
+      <section class="sec">
+        <h2><%= t('overview') %></h2>
+        <% paras.forEach(p => { %><p><%= p %></p><% }) %>
+      </section>
+
+      <% const feats = L(item.features); if (Array.isArray(feats) && feats.length) { %>
+      <section class="sec">
+        <h2><%= t('features') %></h2>
+        <ul class="feat">
+          <% feats.forEach(f => { %><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><%= f %></span></li><% }) %>
+        </ul>
+      </section>
+      <% } %>
+
+      <% if ((item.techStack || []).length) { %>
+      <section class="sec">
+        <h2><%= t('techStack') %></h2>
+        <div class="tags big"><% item.techStack.forEach(x => { %><span><%= x %></span><% }) %></div>
+      </section>
+      <% } %>
+
+      <% if (item.shots.length) { %>
+      <section class="sec">
+        <h2><%= t('screenshots') %></h2>
+        <div class="shots">
+          <% item.shots.forEach((s, i) => { %>
+            <a href="<%= s %>" data-lightbox><img src="<%= s %>" alt="<%= L(item.title) %> – <%= i + 1 %>" loading="lazy" width="800" height="600"></a>
+          <% }) %>
+        </div>
+      </section>
+      <% } %>
+
+      <% if (docs.length) { %>
+      <section class="sec">
+        <h2><%= t('documents') %></h2>
+        <ul class="docs">
+          <% docs.forEach(d => { %>
+          <li>
+            <span class="doc-ico <%= String(d.format || '').toLowerCase() %>"><%= d.format || 'FILE' %></span>
+            <div>
+              <b><%= d.title ? L(d.title) : t('doc.' + d.type) %></b>
+              <small>
+                <%= [d.pages ? t('pages', { n: d.pages }) : '', d.words ? t('words', { n: d.words }) : '', d.note ? L(d.note) : ''].filter(Boolean).join(' · ') %>
+              </small>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+        <p class="muted small"><%= t('docsNote') %></p>
+      </section>
+      <% } %>
+    </article>
+
+    <aside class="buybox">
+      <div class="buy-card">
+        <img class="buy-cover" src="<%= item.coverUrl %>" alt="" width="800" height="600">
+        <div class="buy-body">
+          <% if (item.price) { %><div class="price-row"><span class="muted"><%= t('price') %></span><b class="price-lg"><%= L(item.price) %></b></div><% } %>
+          <% if (docs.length) { %>
+          <ul class="incl">
+            <% docs.forEach(d => { %><li>✓ <%= d.title ? L(d.title) : t('doc.' + d.type) %></li><% }) %>
+            <% if (item.videoInfo) { %><li>✓ <%= t('video') %></li><% } %>
+          </ul>
+          <% } %>
+          <a class="btn btn-buy btn-block btn-lg" href="<%= buy %>" target="_blank" rel="noopener noreferrer sponsored"><%= t('buyNow') %> →</a>
+          <p class="muted small"><%= L(site.deliveryNote) %></p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <% if (related.length) { %>
+  <section class="sec related">
+    <h2><%= t('related') %></h2>
+    <div class="grid">
+      <% related.forEach(it => { %><%- include('partials/card', { it, sec: section }) %><% }) %>
+    </div>
+  </section>
+  <% } %>
+</div>
+
+<div class="sticky-buy" role="region" aria-label="<%= t('buyNow') %>">
+  <div>
+    <b><%= L(item.price) || L(item.title) %></b>
+    <small><%= L(item.title) %></small>
+  </div>
+  <a class="btn btn-buy" href="<%= buy %>" target="_blank" rel="noopener noreferrer sponsored"><%= t('buyNow') %></a>
+</div>
+<%- include('partials/foot') %>

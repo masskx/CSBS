@@ -1,0 +1,25 @@
+<%- include('partials/head', { title: L(section.title), description: L(section.desc) }) %>
+<section class="page-head">
+  <div class="wrap">
+    <h1><%= L(section.title) %></h1>
+    <p class="muted"><%= L(section.desc) %></p>
+  </div>
+</section>
+<section class="block tight">
+  <div class="wrap">
+    <% if (cats.length && section.items.length) { %>
+    <div class="filters" role="tablist">
+      <a href="/<%= lang %>/<%= section.id %>" class="<%= activeCat ? '' : 'on' %>"><%= t('all') %> <small><%= section.items.length %></small></a>
+      <% cats.forEach(c => { %>
+        <a href="/<%= lang %>/<%= section.id %>?cat=<%= c.id %>" class="<%= activeCat === c.id ? 'on' : '' %>"><%= L(c.label) %> <small><%= counts[c.id] %></small></a>
+      <% }) %>
+    </div>
+    <% } %>
+    <% if (items.length) { %>
+      <div class="grid">
+        <% items.forEach(it => { %><%- include('partials/card', { it, sec: section }) %><% }) %>
+      </div>
+    <% } else { %><%- include('partials/soon') %><% } %>
+  </div>
+</section>
+<%- include('partials/foot') %>

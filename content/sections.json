@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "projects",
+      "title": { "zh": "毕业设计", "en": "Graduation Projects" },
+      "desc": { "zh": "计算机专业毕业设计精选，覆盖 Web、小程序、AI 与桌面应用。", "en": "Curated CS graduation projects across web, mini-program, AI and desktop apps." },
+      "categories": [
+        { "id": "web", "label": { "zh": "Web 系统", "en": "Web" } },
+        { "id": "mobile", "label": { "zh": "小程序 / App", "en": "Mobile" } },
+        { "id": "ai", "label": { "zh": "人工智能", "en": "AI" } },
+        { "id": "desktop", "label": { "zh": "桌面应用", "en": "Desktop" } }
+      ]
+    },
+    {
+      "id": "research",
+      "title": { "zh": "科研创新", "en": "Research & Innovation" },
+      "desc": { "zh": "科研项目与创新创业成果，敬请期待。", "en": "Research and innovation projects — coming soon." },
+      "categories": []
+    },
+    {
+      "id": "modeling",
+      "title": { "zh": "数学建模", "en": "Math Modeling" },
+      "desc": { "zh": "数学建模竞赛思路与论文，敬请期待。", "en": "Mathematical modeling solutions and papers — coming soon." },
+      "categories": []
+    }
+  ]
+}

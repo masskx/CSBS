@@ -1,0 +1,23 @@
+{
+  "order": 2,
+  "category": "mobile",
+  "year": 2026,
+  "price": "¥169",
+  "title": { "zh": "智慧健康管理小程序", "en": "Smart Health Mini Program" },
+  "summary": { "zh": "记录运动、饮食与睡眠，生成个人健康报告的微信小程序。", "en": "A WeChat mini program that tracks exercise, diet and sleep and generates health reports." },
+  "description": {
+    "zh": "用户可记录每日运动、饮食与睡眠数据，系统自动生成周报和趋势图，并提供健康建议。后台管理端支持内容发布和用户数据统计。",
+    "en": "Users log daily exercise, meals and sleep; the app builds weekly reports and trend charts with personalised tips. The back office handles content publishing and user statistics."
+  },
+  "features": {
+    "zh": ["微信一键登录", "运动 / 饮食 / 睡眠打卡", "ECharts 趋势图与周报", "健康资讯与后台管理"],
+    "en": ["One-tap WeChat login", "Exercise / diet / sleep logging", "ECharts trends and weekly reports", "Health articles and admin console"]
+  },
+  "techStack": ["WeChat Mini Program", "Node.js", "Express", "MongoDB", "ECharts"],
+  "screenshots": ["shot-1.png", "shot-2.png"],
+  "documents": [
+    { "type": "thesis", "format": "Word", "pages": 52 },
+    { "type": "install", "format": "Word", "pages": 10 },
+    { "type": "source", "format": "ZIP" }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "order": 4,
+  "category": "desktop",
+  "year": 2025,
+  "price": "¥129",
+  "title": { "zh": "图书馆管理系统（桌面版）", "en": "Library Management System (Desktop)" },
+  "summary": { "zh": "JavaFX 实现的图书借阅、归还与统计管理软件。", "en": "A JavaFX desktop app for lending, returns and statistics." },
+  "description": {
+    "zh": "覆盖图书入库、读者管理、借还流程、逾期提醒与报表导出，界面简洁，开箱即用。",
+    "en": "Covers book intake, reader management, lending and returns, overdue reminders and report export, with a clean out-of-the-box UI."
+  },
+  "features": {
+    "zh": ["图书与读者管理", "借还流程与逾期提醒", "统计报表导出 Excel"],
+    "en": ["Book and reader management", "Lending flow with overdue alerts", "Excel report export"]
+  },
+  "techStack": ["Java", "JavaFX", "MySQL", "MyBatis"],
+  "screenshots": ["shot-1.png", "shot-2.png"],
+  "documents": [
+    { "type": "thesis", "format": "Word", "pages": 48 },
+    { "type": "install", "format": "Word", "pages": 8 },
+    { "type": "source", "format": "ZIP" }
+  ]
+}

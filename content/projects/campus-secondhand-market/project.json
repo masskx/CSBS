@@ -1,0 +1,25 @@
+{
+  "order": 1,
+  "featured": true,
+  "category": "web",
+  "year": 2026,
+  "price": "¥199",
+  "title": { "zh": "校园二手交易平台", "en": "Campus Second-hand Marketplace" },
+  "summary": { "zh": "面向高校学生的二手物品发布、搜索、下单与聊天平台。", "en": "A marketplace where students list, search, order and chat about second-hand goods." },
+  "description": {
+    "zh": "系统采用前后端分离架构，学生可发布闲置物品、按分类和关键词检索、在线下单并与卖家实时沟通。管理员后台支持用户管理、商品审核与数据统计。\n\n项目结构清晰、注释完整，适合作为本科毕业设计，并附带完整论文与部署说明。",
+    "en": "A front/back-end separated system where students can post items, search by category and keyword, place orders and chat with sellers in real time. The admin console covers user management, listing review and statistics.\n\nThe codebase is clean and well commented — a solid fit for a bachelor's thesis, delivered with the full paper and setup guide."
+  },
+  "features": {
+    "zh": ["用户注册 / 登录与角色权限", "商品发布、图片上传、分类检索", "订单流程与站内消息", "管理员审核与数据看板"],
+    "en": ["Sign-up / login with role-based access", "Listings, image upload and category search", "Order flow and in-app messaging", "Admin review and analytics dashboard"]
+  },
+  "techStack": ["Spring Boot", "Vue 3", "MySQL", "Redis", "WebSocket"],
+  "screenshots": ["shot-1.png", "shot-2.png", "shot-3.png"],
+  "video": { "file": "demo.mp4" },
+  "documents": [
+    { "type": "thesis", "format": "Word", "pages": 58, "words": 16000 },
+    { "type": "install", "format": "Word", "pages": 12 },
+    { "type": "source", "format": "ZIP" }
+  ]
+}

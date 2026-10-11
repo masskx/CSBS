@@ -1,0 +1,24 @@
+{
+  "order": 3,
+  "featured": true,
+  "category": "ai",
+  "year": 2026,
+  "price": "¥229",
+  "title": { "zh": "基于深度学习的图像识别系统", "en": "Deep-learning Image Recognition System" },
+  "summary": { "zh": "CNN 训练、评估与网页在线识别一体化系统。", "en": "An all-in-one system for CNN training, evaluation and online web recognition." },
+  "description": {
+    "zh": "基于 PyTorch 实现 ResNet 迁移学习，提供数据集管理、训练曲线可视化与模型评估，并通过 Flask 网页上传图片即可在线识别。",
+    "en": "Transfer learning with ResNet in PyTorch, including dataset management, training-curve visualisation and evaluation. Upload an image in the Flask web UI to get predictions instantly."
+  },
+  "features": {
+    "zh": ["数据集上传与划分", "训练过程曲线可视化", "混淆矩阵与准确率评估", "网页在线识别"],
+    "en": ["Dataset upload and splitting", "Live training curves", "Confusion matrix and accuracy report", "Online recognition in the browser"]
+  },
+  "techStack": ["Python", "PyTorch", "Flask", "OpenCV", "SQLite"],
+  "screenshots": ["shot-1.png", "shot-2.png", "shot-3.png"],
+  "documents": [
+    { "type": "thesis", "format": "Word", "pages": 61 },
+    { "type": "install", "format": "Word", "pages": 9 },
+    { "type": "source", "format": "ZIP" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "url": "",
+  "siteName": { "zh": "毕设工坊", "en": "GradLab" },
+  "tagline": { "zh": "计算机毕业设计 · 完整源码 · 论文 · 部署文档", "en": "CS graduation projects · source code · thesis · setup guide" },
+  "heroTitle": { "zh": "拿来就能答辩的计算机毕业设计", "en": "Graduation projects that are ready to defend" },
+  "heroDesc": {
+    "zh": "每个项目都附带完整源码、Word 毕业论文与详细安装文档，并提供演示视频，让你省下数周时间。",
+    "en": "Every project ships with full source code, a Word thesis and a step-by-step installation guide, plus a demo video — save weeks of work."
+  },
+  "highlights": [
+    { "zh": "完整源码", "en": "Full source code" },
+    { "zh": "Word 论文", "en": "Word thesis" },
+    { "zh": "安装文档", "en": "Install guide" },
+    { "zh": "演示视频", "en": "Demo video" }
+  ],
+  "buyUrl": "https://example.com/your-shop",
+  "ctaTitle": { "zh": "看中了？直接下单", "en": "Found one you like?" },
+  "ctaDesc": {
+    "zh": "点击下方按钮前往我的店铺购买，付款后按店铺说明获取资料。有定制需求也欢迎联系。",
+    "en": "Head to my shop to buy. You'll receive the files right after payment. Custom work is welcome too."
+  },
+  "deliveryNote": {
+    "zh": "付款后按店铺页面说明获取资料；遇到安装问题可联系客服。",
+    "en": "Files are delivered after payment as described in the shop. Contact me if you hit installation issues."
+  },
+  "contact": { "wechat": "your_wechat_id", "email": "you@example.com" },
+  "icp": ""
+}
