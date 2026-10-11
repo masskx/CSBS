@@ -3,7 +3,6 @@
   "featured": true,
   "category": "ai",
   "year": 2026,
-  "price": "¥229",
   "title": { "zh": "基于深度学习的图像识别系统", "en": "Deep-learning Image Recognition System" },
   "summary": { "zh": "CNN 训练、评估与网页在线识别一体化系统。", "en": "An all-in-one system for CNN training, evaluation and online web recognition." },
   "description": {

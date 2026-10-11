@@ -1,8 +1,8 @@
 <%- include('partials/head', { title: t('notFound') }) %>
-<section class="wrap soon-box big">
-  <div class="code"><%= code %></div>
+<section class="wrap err">
+  <p class="code"><%= code %></p>
   <h1><%= t('notFound') %></h1>
-  <p><%= t('notFoundDesc') %></p>
-  <a class="btn btn-primary" href="/<%= lang %>/"><%= t('backHome') %></a>
+  <p class="lead"><%= t('notFoundDesc') %></p>
+  <a class="btn btn-ink" href="/<%= lang %>/"><%= t('backHome') %></a>
 </section>
 <%- include('partials/foot') %>

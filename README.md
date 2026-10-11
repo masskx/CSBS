@@ -30,6 +30,8 @@ All text fields are `{ "zh": "...", "en": "..." }`.
 
 **Only images/videos are served publicly** (`/media`). Word / install docs / source code are listed as "what's included" but are *not* downloadable from the site – deliver them via your shop after payment. Don't put paid files in `content/` anyway.
 
+**No prices are shown anywhere on the site** (by design): visitors see what's included and a "Get this project" button that goes to your shop, where the price is shown.
+
 ## Add a new section (research, modeling, …)
 `content/sections.json` already defines `research` and `modeling` (shown as "Coming soon"). To fill one, create `content/research/<project>/project.json` – it appears automatically. Add more sections by adding an entry to `sections.json`.
 

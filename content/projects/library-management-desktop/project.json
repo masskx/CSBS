@@ -2,7 +2,6 @@
   "order": 4,
   "category": "desktop",
   "year": 2025,
-  "price": "¥129",
   "title": { "zh": "图书馆管理系统（桌面版）", "en": "Library Management System (Desktop)" },
   "summary": { "zh": "JavaFX 实现的图书借阅、归还与统计管理软件。", "en": "A JavaFX desktop app for lending, returns and statistics." },
   "description": {

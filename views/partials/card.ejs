@@ -1,18 +1,7 @@
-<a class="card" href="/<%= lang %>/<%= it.section %>/<%= it.slug %>">
-  <div class="thumb">
-    <img src="<%= it.coverUrl %>" alt="<%= L(it.title) %>" loading="lazy" width="800" height="600">
-    <% const cat = (sec.categories || []).find(c => c.id === it.category); %>
-    <% if (cat) { %><span class="badge"><%= L(cat.label) %></span><% } %>
-  </div>
-  <div class="card-body">
-    <h3><%= L(it.title) %></h3>
-    <p><%= L(it.summary) %></p>
-    <div class="tags">
-      <% (it.techStack || []).slice(0, 3).forEach(tag => { %><span><%= tag %></span><% }) %>
-    </div>
-    <div class="card-foot">
-      <b class="price"><%= L(it.price) %></b>
-      <span class="more"><%= t('viewDetails') %> →</span>
-    </div>
-  </div>
+<a class="tile" href="/<%= lang %>/<%= it.section %>/<%= it.slug %>">
+  <div class="thumb"><img src="<%= it.coverUrl %>" alt="<%= L(it.title) %>" loading="lazy" width="800" height="600"></div>
+  <% const cat = (sec.categories || []).find(c => c.id === it.category); %>
+  <p class="tile-meta"><%= cat ? L(cat.label) : '' %><%= it.year ? ' · ' + it.year : '' %></p>
+  <h3><%= L(it.title) %></h3>
+  <p class="tile-sum"><%= L(it.summary) %></p>
 </a>

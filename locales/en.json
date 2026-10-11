@@ -2,8 +2,8 @@
   "nav.home": "Home",
   "soon": "Soon",
   "browse": "Browse projects",
-  "buy": "Buy now",
-  "buyNow": "Buy now",
+  "buy": "Get this project",
+  "buyNow": "Get this project",
   "all": "All",
   "count": "{n} total",
   "viewDetails": "View details",
@@ -19,7 +19,6 @@
   "video": "Demo video",
   "documents": "What's included",
   "related": "More projects",
-  "price": "Price",
   "included": "Included",
   "category": "Category",
   "year": "Year",
@@ -36,5 +35,9 @@
   "docsNote": "Documents are delivered after purchase.",
   "lightboxClose": "Close",
   "language": "Switch language",
-  "switchTo": "中文"
+  "switchTo": "中文",
+  "get": "Get this project",
+  "getShort": "Get it",
+  "includedLabel": "You get",
+  "index": "Index"
 }

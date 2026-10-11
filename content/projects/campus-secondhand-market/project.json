@@ -3,7 +3,6 @@
   "featured": true,
   "category": "web",
   "year": 2026,
-  "price": "¥199",
   "title": { "zh": "校园二手交易平台", "en": "Campus Second-hand Marketplace" },
   "summary": { "zh": "面向高校学生的二手物品发布、搜索、下单与聊天平台。", "en": "A marketplace where students list, search, order and chat about second-hand goods." },
   "description": {
