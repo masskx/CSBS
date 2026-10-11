@@ -2,8 +2,8 @@
   "nav.home": "首页",
   "soon": "即将上线",
   "browse": "浏览项目",
-  "buy": "前往购买",
-  "buyNow": "立即购买",
+  "buy": "获取此项目",
+  "buyNow": "获取此项目",
   "all": "全部",
   "count": "共 {n} 个",
   "viewDetails": "查看详情",
@@ -19,7 +19,6 @@
   "video": "演示视频",
   "documents": "随项目提供的资料",
   "related": "更多项目",
-  "price": "价格",
   "included": "包含内容",
   "category": "类型",
   "year": "年份",
@@ -36,5 +35,9 @@
   "docsNote": "资料为付费内容，购买后获取。",
   "lightboxClose": "关闭",
   "language": "切换语言",
-  "switchTo": "English"
+  "switchTo": "English",
+  "get": "获取此项目",
+  "getShort": "获取",
+  "includedLabel": "你将获得",
+  "index": "目录"
 }

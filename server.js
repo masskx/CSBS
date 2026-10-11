@@ -38,7 +38,7 @@ const findItem = (section, slug) => section && section.items.find((i) => i.slug 
 app.get('/gen/:section/:slug/:name.svg', (req, res) => {
   const { section, slug, name } = req.params;
   if (!findItem(findSection(section), slug) || !/^(cover|shot-\d{1,2})$/.test(name)) return res.sendStatus(404);
-  res.type('image/svg+xml').set('Cache-Control', 'public, max-age=86400').send(placeholder(`${slug}/${name}`, name, slug));
+  res.type('image/svg+xml').set('Cache-Control', 'public, max-age=86400').send(placeholder(`${slug}/${name}`, name));
 });
 
 // ---- language entry points ----------------------------------------------

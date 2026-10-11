@@ -2,17 +2,17 @@
 <% const _buy = typeof item !== 'undefined' && item ? buyUrlFor(item) : site.buyUrl; %>
 <section class="cta" id="buy">
   <div class="wrap cta-inner">
-    <div>
-      <h2><%= L(site.ctaTitle) %></h2>
+    <h2><%= L(site.ctaTitle) %></h2>
+    <div class="cta-side">
       <p><%= L(site.ctaDesc) %></p>
+      <a class="btn btn-buy" href="<%= _buy %>" target="_blank" rel="noopener noreferrer sponsored"><%= t('get') %> <span aria-hidden="true">→</span></a>
       <% if (site.contact && (site.contact.wechat || site.contact.email)) { %>
       <p class="contact">
-        <% if (site.contact.wechat) { %><span><%= t('wechat') %>：<b><%= site.contact.wechat %></b></span><% } %>
-        <% if (site.contact.email) { %><span><%= t('email') %>：<a href="mailto:<%= site.contact.email %>"><%= site.contact.email %></a></span><% } %>
+        <% if (site.contact.wechat) { %><span><%= t('wechat') %> <b><%= site.contact.wechat %></b></span><% } %>
+        <% if (site.contact.email) { %><span><a href="mailto:<%= site.contact.email %>"><%= site.contact.email %></a></span><% } %>
       </p>
       <% } %>
     </div>
-    <a class="btn btn-buy btn-lg" href="<%= _buy %>" target="_blank" rel="noopener noreferrer sponsored"><%= t('buyNow') %> <span aria-hidden="true">→</span></a>
   </div>
 </section>
 <footer class="site-footer">

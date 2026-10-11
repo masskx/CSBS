@@ -2,14 +2,15 @@
 <section class="hero">
   <div class="wrap">
     <h1><%= L(site.heroTitle) %></h1>
-    <p class="lead"><%= L(site.heroDesc) %></p>
-    <ul class="chips">
-      <% site.highlights.forEach(h => { %><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><%= L(h) %></li><% }) %>
-    </ul>
-    <div class="actions">
-      <a class="btn btn-primary btn-lg" href="#sec-<%= sections[0].id %>"><%= t('browse') %></a>
-      <a class="btn btn-ghost btn-lg" href="<%= site.buyUrl %>" target="_blank" rel="noopener noreferrer sponsored"><%= t('buy') %></a>
+    <div class="hero-row">
+      <p class="lead"><%= L(site.heroDesc) %></p>
+      <div class="actions">
+        <a class="btn btn-ink" href="#sec-<%= sections[0].id %>"><%= t('browse') %> ↓</a>
+      </div>
     </div>
+    <ol class="facts">
+      <% site.highlights.forEach(h => { %><li><%= L(h) %></li><% }) %>
+    </ol>
   </div>
 </section>
 
@@ -17,15 +18,13 @@
 <section class="block" id="sec-<%= sec.id %>">
   <div class="wrap">
     <div class="block-head">
-      <div>
-        <h2><%= L(sec.title) %></h2>
-        <p class="muted"><%= L(sec.desc) %></p>
-      </div>
-      <% if (sec.items.length) { %><a class="link" href="/<%= lang %>/<%= sec.id %>"><%= t('count', { n: sec.items.length }) %> →</a><% } %>
+      <h2><%= L(sec.title) %></h2>
+      <p class="muted"><%= L(sec.desc) %></p>
+      <% if (sec.items.length) { %><a class="more-link" href="/<%= lang %>/<%= sec.id %>"><%= t('count', { n: sec.items.length }) %> →</a><% } %>
     </div>
     <% if (sec.items.length) { %>
-      <div class="grid">
-        <% sec.items.slice(0, 8).forEach(it => { %><%- include('partials/card', { it, sec }) %><% }) %>
+      <div class="tiles">
+        <% sec.items.slice(0, 9).forEach(it => { %><%- include('partials/card', { it, sec }) %><% }) %>
       </div>
     <% } else { %><%- include('partials/soon') %><% } %>
   </div>

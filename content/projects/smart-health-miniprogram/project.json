@@ -2,7 +2,6 @@
   "order": 2,
   "category": "mobile",
   "year": 2026,
-  "price": "¥169",
   "title": { "zh": "智慧健康管理小程序", "en": "Smart Health Mini Program" },
   "summary": { "zh": "记录运动、饮食与睡眠，生成个人健康报告的微信小程序。", "en": "A WeChat mini program that tracks exercise, diet and sleep and generates health reports." },
   "description": {
